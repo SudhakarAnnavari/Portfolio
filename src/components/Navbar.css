@@ -1,0 +1,69 @@
+/* Default styles */
+.nav {
+    background-color: dodgerblue;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: white;
+    height: 12vh;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    cursor: pointer;
+}
+
+ul {
+    display: flex;
+    gap: 50px;
+    list-style-type: none;
+    cursor: pointer;
+}
+
+.hamburger {
+    display: none; /* Initially hide hamburger icon */
+}
+
+@media screen and (max-width: 800px) {
+    .nav {
+        justify-content: space-around;
+        gap: 100px; 
+    }
+
+    .hamburger {
+        display: block; /* Display hamburger icon for small screens */
+        cursor: pointer;
+        font-size: 40px;
+        margin-top: 10px;
+    }
+    .nav-heading{
+        font-size: 24px;
+    }
+
+    ul {
+        display: none; /* Hide the menu by default for small screens */
+        flex-direction: column; /* Change to column layout for small screens */
+        gap: 20px; /* Reduced gap for better spacing */
+        text-align: center;
+        list-style-type: none;
+        cursor: pointer;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        background-color: dodgerblue; /* Added background color */
+        padding: 20px; /* Added padding */
+        box-sizing: border-box; /* Include padding in width */
+        transition: transform 0.3s ease-in-out; /* Added transition for smooth animation */
+        transform: translateY(-100%); /* Initially hide the menu off-screen */
+        top: calc(6vh + 20px);
+    }
+
+    .nav.open ul {
+        display: flex; /* Display the menu when open class is applied */
+        transform: translateY(0); /* Translate menu back into view when open class is applied */
+    }
+
+    .nav.open .hamburger {
+        transform: rotate(90deg); /* Rotate hamburger icon when menu is open */
+    }
+}

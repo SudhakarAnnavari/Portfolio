@@ -1,0 +1,80 @@
+.icon{
+    height: 130px;
+    width: 130px;
+}
+.row1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+    margin-top: 100px;
+}
+.row2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+    margin-top: 40px;
+}
+.card-i{
+    text-align: center;
+}
+.logo-h{
+    margin-top: 2px;
+}
+.skills{
+    height: 100vh;
+}
+
+
+@media screen and (max-width: 800px) {
+    .icon {
+        height: 80px;
+        width: 80px;
+    }
+    .skills{
+        height: auto;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .logo-h {
+        font-size: 14px;
+    }
+    .row1{
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 100px;
+    }
+    .row2{
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 40px;
+    }
+}
+@media screen and (max-width: 450px) {
+    .icon {
+        height: 60px;
+        width: 60px;
+    }
+    .skills{
+        height: auto;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .logo-h {
+        font-size: 14px;
+    }
+    .row1{
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 100px;
+    }
+    .row2{
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 40px;
+    }
+}
+
